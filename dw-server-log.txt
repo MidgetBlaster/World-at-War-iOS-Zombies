@@ -1,0 +1,183 @@
+[2026-10-20T02:44:16.263Z INFO  dw_server] Watching WAW parent process PID 21196
+WAW relay listening on 0.0.0.0:3077. Empty lobby 'default' is ready. Players connect outbound; a player starts the match in Co-Op > Wi-Fi.
+[2026-10-20T02:44:16.265Z INFO  dw_server] Standalone dw-server is ready without a running game. Close this console to stop it.
+[2026-10-20T02:44:16.265Z INFO  bitdemon::stun::server] Opened STUN socket on 0.0.0.0 port 3478
+[2026-10-20T02:44:16.265Z INFO  bitdemon::stun::server] Opened STUN socket on 0.0.0.0 port 3074
+[2026-10-20T02:44:16.266Z INFO  bitdemon::networking::bd_socket] Opened bitdemon socket on 0.0.0.0 port 3075
+[2026-10-20T02:44:16.266Z INFO  bitdemon::networking::bd_socket] Opened bitdemon socket on 0.0.0.0 port 3074
+[2026-10-20T02:44:16.266Z INFO  bitdemon::auth::auth_server] Adding SteamForMmpRequest auth handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::auth::auth_server] Adding CreateAccountRequest auth handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::auth::auth_server] Adding AccountForMmpRequest auth handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding LobbyService lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding Anticheat lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding BandwidthTest lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding ContentStreaming lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding Counter lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding Dml lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding EventLog lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding Group lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding KeyArchive lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding League lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding LinkCode lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding Matchmaking lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding Profile lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding RichPresence lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding Storage lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding TitleUtilities lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding Twitch lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding VoteRank lobby handler
+[2026-10-20T02:44:16.266Z INFO  bitdemon::lobby] Adding Youtube lobby handler
+[2026-10-20T02:44:16.267Z INFO  dw_server] Running content http server on port 3076
+[2026-10-20T02:44:16.387Z INFO  bitdemon::networking::session_manager] New session 0 from 127.0.0.1:57178
+[2026-10-20T02:44:16.387Z INFO  bitdemon::networking::session_manager lobby-0] Session ended
+[2026-10-20T02:44:16.387Z INFO  bitdemon::networking::session_manager] New session 0 from 127.0.0.1:57179
+[2026-10-20T02:44:16.387Z INFO  bitdemon::networking::session_manager auth-0] Session ended
+Relay: player 1 joined room default (1 player(s)).
+[2026-10-20T02:44:29.747Z INFO  bitdemon::networking::session_manager] New session 1 from 127.0.0.1:57181
+[2026-10-20T02:44:29.803Z DEBUG bitdemon::networking::bd_socket auth-1] Ping
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::networking::bd_socket auth-1] Message with size 116
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::messaging::bd_message auth-1] raw message 0000: 00 00 51 4f 34 c6 39 c2 2e 00 00 00 00 00 00 00 |..QO4.9.........|
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::messaging::bd_message auth-1] raw message 0010: 00 00 00 a0 42 b0 84 6d 67 43 a3 23 f0 80 5c a0 |....B..mgC.#..\.|
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::messaging::bd_message auth-1] raw message 0020: 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 |-....)......1.\.|
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::messaging::bd_message auth-1] raw message 0030: 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 |-....)......1.\.|
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::messaging::bd_message auth-1] raw message 0040: 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 |-....)......1.\.|
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::messaging::bd_message auth-1] raw message 0050: 2d 05 1a 96 ac ef e6 c7 53 0a de a0 a6 d9 44 0c |-.......S.....D.|
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::messaging::bd_message auth-1] raw message 0060: e1 6f 62 12 72 ae 12 9a 77 1a 32 07 2c a3 31 f4 |.ob.r...w.2.,.1.|
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::messaging::bd_message auth-1] raw message 0070: cf 1a 29 00                                     |..).|
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::messaging::bd_message auth-1] raw message: 116 bytes total
+[2026-10-20T02:44:29.810Z INFO  bitdemon::auth::auth_handler::account auth-1] CreateAccountRequest fields: U32(3877163325), U32(1496)
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::auth::auth_handler::account auth-1] CreateAccountRequest: 104 bytes left (read ok=true)
+[2026-10-20T02:44:29.810Z DEBUG bitdemon::auth::auth_handler::account auth-1] CreateAccountRequest rest: "........B..mgC.#..\.-....)......1.\.-....)......1.\.-....)......1.\.-.......S.....D..ob.r...w.2.,.1...)." [00 00 00 00 00 00 00 a0 42 b0 84 6d 67 43 a3 23 f0 80 5c a0 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 2d 05 1a 96 ac ef e6 c7 53 0a de a0 a6 d9 44 0c e1 6f 62 12 72 ae 12 9a 77 1a 32 07 2c a3 31 f4 cf 1a 29 00]
+[2026-10-20T02:44:29.810Z INFO  bitdemon::auth::auth_handler::account auth-1] Creating account "Player57181" for title 0x5d8 (CodWawZombiesIphone)
+[2026-10-20T02:44:29.810Z INFO  bitdemon::auth::auth_handler::account auth-1] Created account "Player57181" with user id 1001
+[2026-10-20T02:44:29.879Z INFO  bitdemon::networking::session_manager auth-1] Session ended
+[2026-10-20T02:44:29.934Z INFO  bitdemon::networking::session_manager] New session 2 from 127.0.0.1:57182
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::networking::bd_socket auth-2] Ping
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::networking::bd_socket auth-2] Message with size 116
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::messaging::bd_message auth-2] raw message 0000: 00 00 51 4f 34 c6 39 92 a5 00 00 00 00 00 00 00 |..QO4.9.........|
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::messaging::bd_message auth-2] raw message 0010: 00 00 00 a0 42 b0 84 6d 67 43 a3 23 f0 80 5c a0 |....B..mgC.#..\.|
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::messaging::bd_message auth-2] raw message 0020: 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 |-....)......1.\.|
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::messaging::bd_message auth-2] raw message 0030: 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 |-....)......1.\.|
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::messaging::bd_message auth-2] raw message 0040: 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 |-....)......1.\.|
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::messaging::bd_message auth-2] raw message 0050: 2d 05 1a 96 ac ef e6 c7 53 0a de a0 a6 d9 44 0c |-.......S.....D.|
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::messaging::bd_message auth-2] raw message 0060: e1 6f 62 12 72 ae 12 9a 77 1a 32 07 2c a3 31 f4 |.ob.r...w.2.,.1.|
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::messaging::bd_message auth-2] raw message 0070: cf 1a 29 00                                     |..).|
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::messaging::bd_message auth-2] raw message: 116 bytes total
+[2026-10-20T02:44:29.955Z INFO  bitdemon::auth::auth_handler::account auth-2] CreateAccountRequest fields: U32(3877163325), U32(5298)
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::auth::auth_handler::account auth-2] CreateAccountRequest: 104 bytes left (read ok=true)
+[2026-10-20T02:44:29.955Z DEBUG bitdemon::auth::auth_handler::account auth-2] CreateAccountRequest rest: "........B..mgC.#..\.-....)......1.\.-....)......1.\.-....)......1.\.-.......S.....D..ob.r...w.2.,.1...)." [00 00 00 00 00 00 00 a0 42 b0 84 6d 67 43 a3 23 f0 80 5c a0 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 2d 05 1a 96 ac ef e6 c7 53 0a de a0 a6 d9 44 0c e1 6f 62 12 72 ae 12 9a 77 1a 32 07 2c a3 31 f4 cf 1a 29 00]
+[2026-10-20T02:44:29.955Z INFO  bitdemon::auth::auth_handler::account auth-2] Creating account "Player57182" for title 0x14b2 (CodWawZombiesIphoneDlc)
+[2026-10-20T02:44:29.955Z INFO  bitdemon::auth::auth_handler::account auth-2] Created account "Player57182" with user id 1002
+[2026-10-20T02:44:29.999Z INFO  bitdemon::networking::session_manager auth-2] Session ended
+[2026-10-20T02:44:30.033Z INFO  bitdemon::networking::session_manager] New session 3 from 127.0.0.1:57183
+[2026-10-20T02:44:30.055Z DEBUG bitdemon::networking::bd_socket auth-3] Ping
+[2026-10-20T02:44:30.055Z DEBUG bitdemon::networking::bd_socket auth-3] Message with size 20
+[2026-10-20T02:44:30.056Z DEBUG bitdemon::messaging::bd_message auth-3] raw message 0000: 00 0a 51 4f 34 c6 39 c2 2e 00 00 e0 cb 4e 79 3d |..QO4.9......Ny=|
+[2026-10-20T02:44:30.056Z DEBUG bitdemon::messaging::bd_message auth-3] raw message 0010: 73 6c 1a 02                                     |sl..|
+[2026-10-20T02:44:30.056Z DEBUG bitdemon::messaging::bd_message auth-3] raw message: 20 bytes total
+[2026-10-20T02:44:30.056Z INFO  bitdemon::auth::auth_handler::account auth-3] AccountForMmpRequest fields: U32(3877163325), U32(1496)
+[2026-10-20T02:44:30.056Z DEBUG bitdemon::auth::auth_handler::account auth-3] AccountForMmpRequest: 7 bytes left (read ok=true)
+[2026-10-20T02:44:30.056Z DEBUG bitdemon::auth::auth_handler::account auth-3] AccountForMmpRequest rest: "Ny=sl.." [4e 79 3d 73 6c 1a 02]
+[2026-10-20T02:44:30.056Z INFO  bitdemon::auth::auth_handler::account auth-3] "Player57183" has no account here yet, making one
+[2026-10-20T02:44:30.056Z INFO  bitdemon::auth::auth_handler::account auth-3] Created account "Player57183" with user id 1003
+[2026-10-20T02:44:30.056Z INFO  bitdemon::auth::auth_handler::account auth-3] "Player57183" (user id 1003) logged in for title CodWawZombiesIphone
+[2026-10-20T02:44:30.056Z DEBUG bitdemon::auth::auth_handler::account auth-3] Ticket key by the usual recipe: TigerOfPassword
+[2026-10-20T02:44:30.056Z INFO  bitdemon::auth::key_store auth-3] Current key reached end of lifetime, creating a new one
+[2026-10-20T02:44:30.056Z DEBUG bitdemon::auth::auth_handler::account auth-3] Replying with the usual layout: ReplyShape { cd_key_len: 0, user_ticket: true, zero_seed: false }
+[2026-10-20T02:44:30.117Z INFO  bitdemon::networking::session_manager auth-3] Session ended
+[2026-10-20T02:44:30.140Z INFO  bitdemon::networking::session_manager] New session 4 from 127.0.0.1:57184
+[2026-10-20T02:44:30.162Z DEBUG bitdemon::networking::bd_socket auth-4] Ping
+[2026-10-20T02:44:30.162Z DEBUG bitdemon::networking::bd_socket auth-4] Message with size 20
+[2026-10-20T02:44:30.162Z DEBUG bitdemon::messaging::bd_message auth-4] raw message 0000: 00 0a 51 4f 34 c6 39 92 a5 00 00 e0 cb 4e 79 3d |..QO4.9......Ny=|
+[2026-10-20T02:44:30.162Z DEBUG bitdemon::messaging::bd_message auth-4] raw message 0010: 73 6c 1a 02                                     |sl..|
+[2026-10-20T02:44:30.162Z DEBUG bitdemon::messaging::bd_message auth-4] raw message: 20 bytes total
+[2026-10-20T02:44:30.162Z INFO  bitdemon::auth::auth_handler::account auth-4] AccountForMmpRequest fields: U32(3877163325), U32(5298)
+[2026-10-20T02:44:30.162Z DEBUG bitdemon::auth::auth_handler::account auth-4] AccountForMmpRequest: 7 bytes left (read ok=true)
+[2026-10-20T02:44:30.162Z DEBUG bitdemon::auth::auth_handler::account auth-4] AccountForMmpRequest rest: "Ny=sl.." [4e 79 3d 73 6c 1a 02]
+[2026-10-20T02:44:30.162Z INFO  bitdemon::auth::auth_handler::account auth-4] "Player57184" has no account here yet, making one
+[2026-10-20T02:44:30.162Z INFO  bitdemon::auth::auth_handler::account auth-4] Created account "Player57184" with user id 1004
+[2026-10-20T02:44:30.162Z INFO  bitdemon::auth::auth_handler::account auth-4] "Player57184" (user id 1004) logged in for title CodWawZombiesIphoneDlc
+[2026-10-20T02:44:30.162Z DEBUG bitdemon::auth::auth_handler::account auth-4] Ticket key by the usual recipe: TigerOfPassword
+[2026-10-20T02:44:30.162Z DEBUG bitdemon::auth::auth_handler::account auth-4] Replying with the usual layout: ReplyShape { cd_key_len: 0, user_ticket: true, zero_seed: false }
+[2026-10-20T02:44:30.206Z INFO  bitdemon::networking::session_manager auth-4] Session ended
+[2026-10-20T02:44:30.229Z INFO  bitdemon::networking::session_manager] New session 5 from 127.0.0.1:57185
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::networking::bd_socket auth-5] Ping
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::networking::bd_socket auth-5] Message with size 116
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::messaging::bd_message auth-5] raw message 0000: 00 00 51 4f 34 c6 39 92 a5 00 00 00 00 00 00 00 |..QO4.9.........|
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::messaging::bd_message auth-5] raw message 0010: 00 00 00 a0 42 b0 84 6d 67 43 a3 23 f0 80 5c a0 |....B..mgC.#..\.|
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::messaging::bd_message auth-5] raw message 0020: 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 |-....)......1.\.|
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::messaging::bd_message auth-5] raw message 0030: 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 |-....)......1.\.|
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::messaging::bd_message auth-5] raw message 0040: 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 |-....)......1.\.|
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::messaging::bd_message auth-5] raw message 0050: 2d 05 1a 96 ac ef e6 c7 53 0a de a0 a6 d9 44 0c |-.......S.....D.|
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::messaging::bd_message auth-5] raw message 0060: e1 6f 62 12 72 ae 12 9a 77 1a 32 07 2c a3 31 f4 |.ob.r...w.2.,.1.|
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::messaging::bd_message auth-5] raw message 0070: cf 1a 29 00                                     |..).|
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::messaging::bd_message auth-5] raw message: 116 bytes total
+[2026-10-20T02:44:30.251Z INFO  bitdemon::auth::auth_handler::account auth-5] CreateAccountRequest fields: U32(3877163325), U32(5298)
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::auth::auth_handler::account auth-5] CreateAccountRequest: 104 bytes left (read ok=true)
+[2026-10-20T02:44:30.251Z DEBUG bitdemon::auth::auth_handler::account auth-5] CreateAccountRequest rest: "........B..mgC.#..\.-....)......1.\.-....)......1.\.-....)......1.\.-.......S.....D..ob.r...w.2.,.1...)." [00 00 00 00 00 00 00 a0 42 b0 84 6d 67 43 a3 23 f0 80 5c a0 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 2d 05 1a 06 17 29 0b a9 ee 2e b7 e9 31 81 5c a0 2d 05 1a 96 ac ef e6 c7 53 0a de a0 a6 d9 44 0c e1 6f 62 12 72 ae 12 9a 77 1a 32 07 2c a3 31 f4 cf 1a 29 00]
+[2026-10-20T02:44:30.252Z INFO  bitdemon::auth::auth_handler::account auth-5] Creating account "Player57185" for title 0x14b2 (CodWawZombiesIphoneDlc)
+[2026-10-20T02:44:30.252Z INFO  bitdemon::auth::auth_handler::account auth-5] Created account "Player57185" with user id 1005
+[2026-10-20T02:44:30.295Z INFO  bitdemon::networking::session_manager auth-5] Session ended
+[2026-10-20T02:44:30.318Z INFO  bitdemon::networking::session_manager] New session 6 from 127.0.0.1:57186
+[2026-10-20T02:44:30.340Z DEBUG bitdemon::networking::bd_socket auth-6] Ping
+[2026-10-20T02:44:30.340Z DEBUG bitdemon::networking::bd_socket auth-6] Message with size 20
+[2026-10-20T02:44:30.340Z DEBUG bitdemon::messaging::bd_message auth-6] raw message 0000: 00 0a 51 4f 34 c6 39 92 a5 00 00 e0 cb 4e 79 3d |..QO4.9......Ny=|
+[2026-10-20T02:44:30.340Z DEBUG bitdemon::messaging::bd_message auth-6] raw message 0010: 73 6c 1a 02                                     |sl..|
+[2026-10-20T02:44:30.340Z DEBUG bitdemon::messaging::bd_message auth-6] raw message: 20 bytes total
+[2026-10-20T02:44:30.340Z INFO  bitdemon::auth::auth_handler::account auth-6] AccountForMmpRequest fields: U32(3877163325), U32(5298)
+[2026-10-20T02:44:30.340Z DEBUG bitdemon::auth::auth_handler::account auth-6] AccountForMmpRequest: 7 bytes left (read ok=true)
+[2026-10-20T02:44:30.340Z DEBUG bitdemon::auth::auth_handler::account auth-6] AccountForMmpRequest rest: "Ny=sl.." [4e 79 3d 73 6c 1a 02]
+[2026-10-20T02:44:30.340Z INFO  bitdemon::auth::auth_handler::account auth-6] "Player57186" has no account here yet, making one
+[2026-10-20T02:44:30.340Z INFO  bitdemon::auth::auth_handler::account auth-6] Created account "Player57186" with user id 1006
+[2026-10-20T02:44:30.340Z INFO  bitdemon::auth::auth_handler::account auth-6] "Player57186" (user id 1006) logged in for title CodWawZombiesIphoneDlc
+[2026-10-20T02:44:30.340Z DEBUG bitdemon::auth::auth_handler::account auth-6] Ticket key by the usual recipe: TigerOfPassword
+[2026-10-20T02:44:30.340Z DEBUG bitdemon::auth::auth_handler::account auth-6] Replying with the usual layout: ReplyShape { cd_key_len: 0, user_ticket: true, zero_seed: false }
+[2026-10-20T02:44:30.384Z INFO  bitdemon::networking::session_manager auth-6] Session ended
+[2026-10-20T02:44:30.412Z INFO  bitdemon::networking::session_manager] New session 1 from 127.0.0.1:57187
+[2026-10-20T02:44:30.443Z DEBUG bitdemon::networking::bd_socket lobby-1] Buffer available: 65535
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::networking::bd_socket lobby-1] Message with size 140
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message 0000: 00 07 11 00 00 00 00 02 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message 0010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message 0020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message 0030: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message 0040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message 0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message 0060: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message 0070: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message 0080: 00 00 00 00 00 00 00 00 00 00 00 00             |............|
+[2026-10-20T02:44:30.445Z DEBUG bitdemon::messaging::bd_message lobby-1] raw message: 140 bytes total
+[2026-10-20T02:44:30.445Z INFO  bitdemon::lobby::lsg lobby-1] Connected without a ticket, as "Player1"
+[2026-10-20T02:44:30.665Z INFO  bitdemon::networking::session_manager] New session 2 from 127.0.0.1:57188
+[2026-10-20T02:44:30.838Z DEBUG bitdemon::networking::bd_socket lobby-2] Buffer available: 65535
+[2026-10-20T02:44:30.838Z DEBUG bitdemon::networking::bd_socket lobby-2] Message with size 140
+[2026-10-20T02:44:30.838Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0000: 00 07 11 00 00 00 00 02 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.838Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.838Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.838Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0030: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.838Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.838Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.838Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0060: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.839Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0070: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+[2026-10-20T02:44:30.839Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0080: 00 00 00 00 00 00 00 00 00 00 00 00             |............|
+[2026-10-20T02:44:30.839Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message: 140 bytes total
+[2026-10-20T02:44:30.839Z DEBUG bitdemon::lobby::lsg lobby-2] Reconnected without a ticket, as "Player1"
+[2026-10-20T02:44:34.566Z DEBUG bitdemon::networking::bd_socket lobby-2] Message with size 85
+[2026-10-20T02:44:34.566Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0000: 01 00 00 00 00 2d 19 11 af f8 70 30 90 f7 b0 83 |.....-....p0....|
+[2026-10-20T02:44:34.566Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0010: 0a eb 93 65 1b 73 32 46 d3 b6 0a 47 e8 2a f3 98 |...e.s2F...G.*..|
+[2026-10-20T02:44:34.566Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0020: e4 13 19 19 f5 cf 6f 2a 79 fa c8 9f 25 c2 e2 28 |......o*y...%..(|
+[2026-10-20T02:44:34.566Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0030: a3 a9 17 f9 38 2f 49 7f 15 97 9f e5 0b 2d ba 9c |....8/I......-..|
+[2026-10-20T02:44:34.566Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0040: 41 e6 30 8d 05 42 01 70 97 9d 57 a1 ec 03 94 b2 |A.0..B.p..W.....|
+[2026-10-20T02:44:34.567Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message 0050: 49 ec 30 8d 05                                  |I.0..|
+[2026-10-20T02:44:34.567Z DEBUG bitdemon::messaging::bd_message lobby-2] raw message: 85 bytes total
+[2026-10-20T02:44:34.567Z WARN  bitdemon::lobby::title_utilities::handler lobby-2] Client called unimplemented task RecordEventBin
+[2026-10-20T02:45:10.514Z DEBUG bitdemon::networking::bd_socket lobby-1] Ping
+[2026-10-20T02:45:14.574Z DEBUG bitdemon::networking::bd_socket lobby-2] Ping
+[2026-10-20T02:45:50.533Z DEBUG bitdemon::networking::bd_socket lobby-1] Ping
+[2026-10-20T02:45:54.594Z DEBUG bitdemon::networking::bd_socket lobby-2] Ping
+[2026-10-20T02:46:30.537Z DEBUG bitdemon::networking::bd_socket lobby-1] Ping
+[2026-10-20T02:46:34.610Z DEBUG bitdemon::networking::bd_socket lobby-2] Ping
+[2026-10-20T02:46:45.763Z INFO  bitdemon::networking::session_manager lobby-2] Session ended
+[2026-10-20T02:46:45.766Z INFO  bitdemon::networking::session_manager lobby-1] Session ended
+Relay: player 1 left room default; 0 player(s) remain.
+Relay connection closed: An existing connection was forcibly closed by the remote host. (os error 10054)
+[2026-10-20T02:46:46.904Z INFO  dw_server] WAW parent process PID 21196 exited; shutting down dw-server

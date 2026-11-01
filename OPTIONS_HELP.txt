@@ -1,0 +1,429 @@
+View options:
+    --widescreen-window
+        Open a resizable 1280x720 window and stretch the game to fill it.
+        The game's internal resolution and control scheme are unchanged.
+
+    --fullscreen
+        Display the app in full screen. The default is to display in a window
+        instead, except on Android which always uses full screen.
+
+        The app's output will be scaled to fit your screen. This is independent
+        of the internal resolution, so if the scale hack (see below) is not also
+        in use, the result may be a bit blurry. An internal resolution larger
+        than your screen's is possible, in which case the output is downscaled.
+
+    --upside-down
+    --landscape-left
+    --landscape-right
+        Changes the orientation the virtual device will have at startup.
+        The default is portrait.
+
+        --upside-down means rotate 180° from portrait.
+        --landscape-left means rotate 90° counterclockwise from portrait.
+        --landscape-right means rotate 90° clockwise from portrait.
+
+        Usually apps that require landscape mode will tell touchHLE about this,
+        and it will automatically rotate the window, but some apps neglect to
+        do this. These options may be useful in that case.
+
+    --scale-hack=...
+        Set a scaling factor for the window. touchHLE will attempt to run the
+        app with an increased internal resolution. This is a hack and there's
+        no guarantee it will work correctly for all apps.
+
+        The default is no scale hack, which is equivalent to a value of 1 (i.e.
+        a scale of 1×).
+
+        This is a natural number that is at least 1.
+
+Device options:
+    --device-family=...
+        Specifies which device family should be emulated: iPhone or iPad.
+        This only work if running app does support selected family
+        (or the option will be ignored).
+
+        If omitted, suitable device family would be deduced from application
+        bundle itself, falling back to iPhone if needed.
+
+        Accepted values are "iphone" and "ipad" respectively.
+
+Game controller options:
+    --deadzone=...
+        Configures the size of the \"dead zone\" for analog stick inputs.
+
+        The default value is 0.1, which means that 10% of the stick's range on
+        the X and Y axes around the center position will be collapsed into a
+        single point, so that movements in that range are ignored.
+
+        This is a floating-point (decimal) number between 0 and 1.
+
+    --disable-analog-stick-tilt-controls
+        Disables mapping of analog stick input to simulated rotation of the
+        device.
+
+        By default, if touchHLE detects a game controller, its analog sticks
+        will be used for simulated accelerometer tilt controls. When this
+        happens, the real accelerometer (e.g. on an Android phone), if present,
+        is ignored. By setting this option, the real accelerometer can be used
+        even if a game controller is detected. This may be useful on a device
+        that integrates both an accelerometer and a game controller, or if you
+        do not want to disconnect your game controller.
+
+        Note that touchHLE does not currently support accelerometers contained
+        within game controllers.
+
+    --x-tilt-range=...
+    --y-tilt-range=...
+        Set the simulated rotation range of the device axis mapped to the analog
+        stick X or Y axis, or to the mouse cursor's X or Y position within the
+        window (when the right mouse button is held).
+
+        Positive X and Y are mapped to tilting the device rightward and forward
+        respectively.
+
+        By default, an analog stick's axis is mapped to a rotation range of 60°
+        (30° in either direction). If you wanted a range of 90° on the X axis,
+        you could use --x-tilt-range=90.
+
+        For historical reasons, the device's X axis is mapped to the analog
+        stick's Y axis and vice versa, as if the device is held in landscape.
+
+        This is a floating-point (decimal) number of degrees, without a degree
+        symbol. It may be negative.
+
+    --x-tilt-offset=...
+    --y-tilt-offset=...
+        Offset the simulated angle of the device axis mapped to the analog stick
+        X or Y axis, or to the mouse cursor's X or Y position within the window
+        (when the right mouse button is held).
+
+        Positive X and Y are mapped to tilting the device rightward and forward
+        respectively.
+
+        By default, the device is simulated as being level with the ground when
+        the stick is in the center/neutral position. This option is intended for
+        games that use a different angle relative to the ground as their neutral
+        position. For example, if a game expects you to hold the device in a
+        landscape orientation, with a 45° angle to the ground, you might use
+        --y-tilt-offset=45.
+
+        This is a floating-point (decimal) number of degrees, without a degree
+        symbol. It may be negative.
+
+    --button-to-touch=...
+        Maps a button on a game controller to a point on the simulated touch
+        screen of the device. Pressing the button will behave like touching that
+        part of the screen.
+
+        This is three parts separated by commas: the name of a button (DPadLeft,
+        DPadUp, DPadRight, DPadDown, Start, LeftShoulder or Xbox-like
+        A, B, X or Y), the X co-ordinate and the Y co-ordinate.
+        The co-ordinates are floating-point (decimal) numbers. 0,0 is the
+        top-left corner. The bottom-right corner is 320,480 if the app is in
+        portrait, and 480,320 if the app is in landscape.
+
+        For example, --button-to-touch=A,470,310 will make the A button simulate
+        tapping in the bottom-right corner of the screen, for a landscape game.
+
+        Except where specified in touchHLE_default_options.txt, this is not used
+        by default. There is however a virtual cursor that is controlled by the
+        right analog stick (tap/hold by pressing the stick or right shoulder
+        button).
+
+    --dpad-to-touch=...
+        Maps a D-pad on a game controller to simulated finger movement within a
+        region of the simulated touch screen of the device. This is useful for
+        games where diagonals are used.
+
+        This is four parts separated by commas: x,y,w,h. The co-ordinates
+        are floating-point (decimal) numbers. 0,0 is the top-left corner. The
+        bottom-right corner is 320,480 if the app is in portrait, and 480,320
+        if the app is in landscape.
+
+        For example, --dpad-to-touch=10,10,50,50 will simulate an 8-directional
+        D-pad within a 50x50 pixel region starting at (10,10) on the screen.
+
+        Note that this option takes precedence over any D-pad buttons defined
+        with --button-to-touch.
+
+        Except where specified in touchHLE_default_options.txt, this is not used
+        by default. There is however a virtual cursor that is controlled by the
+        right analog stick (tap/hold by pressing the stick or right shoulder
+        button).
+
+    --stick-to-touch=...
+        Maps the left analog stick to simulated finger movement within a region
+        of the simulated touch screen of the device. This is useful for games
+        which use analog movement controls.
+
+        This is four parts separated by commas: x,y,w,h. The co-ordinates
+        are floating-point (decimal) numbers. 0,0 is the top-left corner. The
+        bottom-right corner is 320,480 if the app is in portrait, and 480,320
+        if the app is in landscape.
+
+        For example, --stick-to-touch=10,10,100,100 will map the left analog
+        stick to control a touch within a 100x100 pixel region starting at
+        (10,10) on the screen.
+
+        Except where specified in touchHLE_default_options.txt, this is not used
+        by default. There is however a virtual cursor that is controlled by the
+        right analog stick (tap/hold by pressing the stick or right shoulder
+        button).
+
+    --stabilize-virtual-cursor=...
+        Apply motion smoothing and a sticky radius to the virtual cursor
+        (controlled by the right analog stick).
+
+        Some apps are very sensitive to small finger movements and will always
+        register an attempted "tap" as a scrolling gesture if the finger moves
+        even very slightly. When combined with the low precision and shakiness
+        of the virtual cursor, it can be difficult to use certain apps' menus.
+        This option exists to compensate for this.
+
+        The value is two floating-point (decimal) numbers separated by a comma.
+        The first is the strength of the motion smoothing, and the second is a
+        radius, in pixels, within which movement of the cursor will be ignored.
+        To increase these values is to trade off responsiveness and precision
+        respectively. Either number can be zero if desired. Note that the effect
+        of the sticky radius is *not* shown on-screen!
+
+        For example, --stabilize-virtual-cursor=0.1,10 will smooth out movements
+        such that sharp movements take about half a second to complete, while
+        movements within a 10px radius will be completely ignored.
+
+Keyboard and mouse options:
+    When an app asks you to type something — which game to join, a password —
+    touchHLE puts the question on the screen, because the app's own prompt is
+    not drawn. Type the answer and press Enter, or Escape to wave the question
+    away. The up and down arrows step through the answers already known: the
+    games found on the network, and whatever touchHLE_profile.txt says.
+
+    F2 asks for the addresses of machines to look for games on, for playing
+    with someone who is not on your network (see --net-peer below).
+
+    --mouse-look-sensitivity=...
+        Call of Duty: World at War: Zombies has built-in keyboard and mouse
+        controls in this build (press Tab or the middle mouse button to switch
+        between mouse-look and a normal cursor). This scales how fast the view
+        turns for a given mouse movement in mouse-look mode. The game's own
+        sensitivity settings (Options > Controls) apply on top of this.
+
+        The default is 1. For example, --mouse-look-sensitivity=1.5 turns 50%
+        faster. This is a positive floating-point (decimal) number.
+
+    --aim-stick-deadzone=...
+        How far the right analog stick must be pushed before it aims, in the
+        Call of Duty: World at War: Zombies controls. Raise this if the view
+        turns slowly on its own when you aren't touching the stick, which
+        happens when a worn stick doesn't return exactly to its centre.
+
+        The default is 0.15, and the value is a floating-point (decimal) number
+        from 0 up to (but not including) 1. For example,
+        --aim-stick-deadzone=0.25 ignores the stick until it is a quarter of
+        the way out. Only the right stick is affected; drift on the left stick
+        is harmless by comparison.
+
+    --raw-aim
+        Aim without the smoothing and response curve that the Call of Duty:
+        World at War: Zombies controls otherwise apply, which some players find
+        sticky or floaty. The aim then follows the mouse and stick as directly
+        as the game allows: no easing towards the target speed, the stick maps
+        straight to how far the view turns, and the synthetic touch moves in one
+        step instead of easing across several frames.
+
+        This makes aiming feel sharper but noisier, and it is more likely to
+        expose the game's own expectations about how a finger moves, so try it
+        both ways. The game's own sensitivity settings (Options > Controls)
+        apply either way.
+
+Graphics driver options:
+    --gles1=...
+        Force touchHLE to use a particular OpenGL ES 1.1 implementation.
+        This may be useful for troubleshooting graphics driver issues.
+
+        --gles1=gles1_on_gl2 will use touchHLE's GLES1-on-GL2 layer.
+        --gles1=gles1_native will use native OpenGL ES 1.1.
+
+        When this option isn't in use, touchHLE will try each in order and use
+        the first one that works.
+
+Debugging options:
+    --disable-direct-memory-access
+        Force dynarmic to always access guest memory via the memory access
+        callbacks, rather than using the fast direct access path (page tables).
+
+    --gdb=...
+        Starts touchHLE in debugging mode, listening for GDB remote serial
+        protocol connections over TCP on the specified host and port.
+
+        You can then connect to touchHLE with GDB and make use of its features
+        to inspect memory and registers, set up software breakpoints, and
+        continue or step execution.
+
+        The host and port should be separated by a colon. The host can be a
+        host name or an IP address. IPv6 addresses should be enclosed in square
+        brackets, e.g. --gdb=[::1]:9001 for IPv6 loopback device port 9001.
+
+    --no-error-popup
+        Disables the graphical error message box (outputs to terminal/log file
+        only).
+
+    --dump=...
+        Dumps some information about app/emulator to dump file. Check
+        src/options.rs:parse_dump_options for the currently available options.
+
+    --dump-file=...
+        Pick the file for information to be dumped to, relative to the user
+        data directory. Defaults to {user directory}/DUMP.txt. Note that this
+        file will get truncated (deleted) if it already exists!
+
+Other options:
+    --preferred-languages=...
+        Specifies a list of preferred languages to be reported to the app.
+
+        This should be one or more ISO 639 language codes (usually two letters)
+        in order of preference, separated by commas. For example,
+        --preferred-languages=de,ja,en means you would prefer German, or failing
+        that Japanese, or failing that English.
+
+        If this option is not specified, the list comes from your operating
+        system's language settings.
+
+        Whether and how this preference is respected, and whether any particular
+        language is supported, is determined entirely by the app.
+
+    --headless
+        Run in headless mode. touchHLE will not create a window, so there will
+        be no graphical output and no input. Only useful for command-line apps.
+        Implies --no-error-popup.
+
+    --args
+        All arguments following this option will be passed to the app (via C's
+        argc/argv) rather than processed by touchHLE. This option can't be used
+        via touchHLE_options.txt or touchHLE_default_options.txt.
+
+    --print-fps
+        Logs the current framerate (FPS) to the console once per second.
+
+    --fps-limit=...
+        Modify or disable the framerate (FPS) limit.
+
+        By default, touchHLE limits the framerate of an app to 60fps, because
+        this is required for accurate emulation. Some apps can however run
+        correctly at a higher framerate than normal.
+
+        This is either 'off', to disable the framerate limit, or otherwise
+        a floating-point (decimal) number of frames per second.
+
+        Note that many apps have an internal timer that determines how often
+        they present frames; increasing the limit will not increase their
+        framerate, but may make it less consistent.
+
+    --force-composition
+        Forces presentation of renderbuffer as if no fullscreen EAGL layer is
+        present, i.e. renderbuffer will go through the compositor.
+
+        Enabling this option may solve some rendering issues, but implies
+        a performance hit which is undesirable in most of the cases.
+
+    --save-slot=NAME
+        Play in the save slot called NAME, keeping its saved games separate
+        from every other slot's. Each slot is a folder in touchHLE_saves, and
+        a copy of the saved data is put in that slot's "history" folder every
+        time the app closes, so a lost save can be recovered.
+
+        A slot can also be named in touchHLE_save_slot.txt, next to the app,
+        which is read when this option is not given. This option has to be
+        passed on the command line, because the save slot is needed before the
+        options files are read.
+
+    --allow-network-access
+        Allow apps running in touchHLE to access the Internet and the local network.
+
+    --resolve=HOST=ADDRESS
+        Answer look-ups of HOST with ADDRESS instead of asking a name server.
+        A HOST starting with a dot matches every name ending in it, so
+        --resolve=.example.net=127.0.0.1 covers a whole domain. May be given
+        more than once. This is for pointing an app at a stand-in for a server
+        it can no longer reach.
+
+    --net-peer=HOST[:PORT]
+        Look for games on this machine as well as on your own network, so that
+        you can play with someone who is somewhere else. HOST is a name or an
+        IPv4 address; PORT is only needed if it isn't the usual 51607. May be
+        given more than once.
+
+        Finding a game on a local network means shouting and listening for a
+        shout back, and a shout doesn't leave the network it was made on, so
+        anyone further away has to be named. You can also press F2 while the
+        game is running to type in addresses, which is saved in
+        touchHLE_netplay.txt next to touchHLE and read again on its own.
+
+        Whoever hosts the game has to be reachable: their router needs port
+        51607 (UDP) forwarded to the machine running touchHLE, for their game
+        to be found, and the port the game itself listens on forwarded, for it
+        to be joined (Call of Duty: World at War: Zombies uses TCP 9864). The
+        player joining needs nothing forwarded. A virtual LAN, such as ZeroTier
+        or Tailscale, avoids forwarding anything: use the address it gives the
+        host.
+
+    --net-announce-port=PORT
+        Tell other machines to reach this one's games on PORT, rather than on
+        the port the app is really listening on. This is for a router that
+        forwards some other port to the game, where the port everyone else has
+        to use is not the one the game knows about.
+
+    --ignore-gl-errors
+        Ignore host OpenGL errors as queried by glGetError function.
+        This only affects return value of glGetError as seen by the guest
+        and nothing else. Should be enabled only for apps which really
+        need this behaviour.
+
+    --zero-stack-after-guest-to-host-call=<bytes>
+        After a guest-to-host call returns, zero out the given number of
+        bytes immediately below the current stack pointer (i.e. the unused
+        scratch region of the guest's full-descending stack).
+        This option exists because a guest-to-host call leaves that region
+        untouched, whereas a real call on iOS could leave it in a "dirty"
+        state. This can make a difference for apps that store data on the
+        stack and branch based on the stack's content. There is normally
+        no reason to enable this option. The number of bytes must be
+        chosen carefully on a per-app basis.
+
+WAWZombies server and camera options:
+    --network-profile=android Use the supplied Android APK's community server
+                              (195.7.7.200), auth TCP 3074, no Wi-Fi relay.
+                              Play through Co-Op > Online with Android players.
+    --network-profile=local   Restore local BitDemon + Wi-Fi relay (auth 3075).
+    --network-profile=android-host Start local Android-compatible Online server
+                              (combined auth/lobby TCP 3074, no Wi-Fi relay).
+                              Profiles replace server/mode/auth/relay settings;
+                              put custom overrides AFTER the profile option.
+    --dw-auth-port=PORT       Auth TCP port (1-65535); default 3075 for BitDemon.
+    --waw-game-port=9784      Online gameplay UDP port; forward it to this PC.
+    --waw-public-ip=auto      Use STUN normally, or set your public IPv4 for
+                              port-forwarded hosting with a local server.
+    --waw-public-port=auto    Optional external UDP port if different from the
+                              local game port. Restart after changing these.
+    --dw-mode=host|join       Start/reuse a local server, or connect to a VPS.
+    --dw-server=HOST          IPv4/hostname used in join mode (default 127.0.0.1).
+    --net-relay               Relay Co-Op Wi-Fi discovery and TCP traffic.
+    --no-net-relay            Use direct LAN discovery instead.
+    --relay-port=3077         Must match the server's relay_port in config.json.
+    --relay-room=default      Same room name for all players (1-64 letters/digits/_/-).
+
+    Optional COD Zombies 1.5.0 cheats (all off by default; restart to apply):
+    --cheat-health=off        on: PlayerHealth and PlayerHealthRecruit = 999999.
+    --cheat-points=off        on: 999999 initial solo points.
+    --cheat-wunderwaffe=off   on: start/respawn with Wunderwaffe on Nacht (80
+                              ammo) and Shi No Numa (999999 ammo), as in APK.
+    --cheat-weak-dogs=off     on: Shi No Numa dog-health/dog-amount APK changes.
+    These modify verified original resources in memory, not the IPA or saves.
+    Joined games may use their host's rules; cheats do not override that host.
+    --fov=native|DEGREES      Native camera or fixed horizontal FOV, 50-120 degrees.
+                              Fixed FOV also replaces zoom FOV; HUD is unaffected.
+    --gamepad-look-sensitivity=1.0
+                              Right-stick speed multiplier (0.1-4.0), unchanged deadzone.
+    --mouse-look-sensitivity=6.0
+                              Mouse speed multiplier; positive finite values.
+    --scale-hack=1            Internal rendering scale; positive whole number.

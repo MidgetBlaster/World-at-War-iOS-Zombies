@@ -1,0 +1,11 @@
+# FOR THE ANDROID APK ONLY. Do not paste --host into the PC settings file.
+# Replace YOUR_SERVER_IPV4 with the real server IPv4 address in all 3 places.
+# Merge these flags into the existing com.activision.callofduty entry in
+# Android's touchHLE_options.txt. Keep its controller/touch options.
+# The supplied reference APK supports --host; port 3074 handles both services.
+# If this APK still resolves the old server, also replace the 195.7.7.200
+# addresses in its touchHLE_default_options.txt. Restart the Android app.
+#
+# com.activision.callofduty: --allow-network-access --host=codzombies-iphone-live.auth.mmp3.demonware.net=YOUR_SERVER_IPV4 --host=codzombies-iphone-live.lsg.mmp3.demonware.net=YOUR_SERVER_IPV4 --host=codzombies-iphone.stun.demonware.net=YOUR_SERVER_IPV4
+#
+# Use Co-Op > Online. Your PC's custom relay-room setting is not an Android lobby.
