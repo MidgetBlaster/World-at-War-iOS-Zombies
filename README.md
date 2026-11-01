@@ -1,7 +1,3 @@
-# Android multiplayer and optional cheats release
-
-See [ANDROID_MULTIPLAYER.md](ANDROID_MULTIPLAYER.md) for launch options, hosting setup and cheat settings. All cheats default to off.
-
 # World at War Zombies iOS PC
 
 Play **Call of Duty: World at War Zombies iOS** on PC with **keyboard and mouse** or **gamepad** support.
