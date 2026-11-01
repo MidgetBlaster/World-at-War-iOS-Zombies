@@ -5,8 +5,7 @@ Play **Call of Duty: World at War Zombies iOS** on PC with **keyboard and mouse*
 ## Installation
 
 1. Download this repository (**Code > Download ZIP**) and extract it to a folder, for example `WAWZombies`.
-2. Download **COD_Zombies_1.5.0.ipa** from:  
-   https://archive.org/download/Call_of_Duty__Zombies_1.5.0_ios_3.0
+2. Download a copy of COD_Zombies_1.5.0.ipa
 3. Place `COD_Zombies_1.5.0.ipa` inside the `WAWZombies\game` folder.
 4. Double-click **WAWZombies.exe**.
 
